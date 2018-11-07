@@ -14,9 +14,6 @@ export const validateAddress = async (address1, address2) => {
     }
     // todo check if it solved after deployment
     if(address1 && address2) {
-        return await fetch(`http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`, {
-            mode: "cors",
-            headers
-        });
+        return await fetch(`http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`);
     }
 };

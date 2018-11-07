@@ -10,10 +10,24 @@ export class ShipInfoFormComponent extends React.Component {
             emailValidity: true,
             phoneValidity: true,
             specialNotesValidity: true,
+            addressValidity: true,
             address: "",
             cityStateZip: ""
         }
     }
+
+    componentDidMount() {
+        this.callApi()
+            .then(res => this.setState({ response: res.express }))
+            .catch(err => console.log(err));
+    }
+
+    async callApi(){
+        const response = await fetch('/api/hello');
+        const body = await response.json();
+        if (response.status !== 200) throw Error(body.message);
+        return body;
+    };
 
     inputValueToState(e) {
         this.setState({[e.target.name]: e.target.value})
@@ -48,9 +62,14 @@ export class ShipInfoFormComponent extends React.Component {
 
     submitForm() {
         console.log(this.state);
-        validateAddress(this.state.address, this.state.cityStateZip).then((res)=>{
-            console.log(res)
-        })
+        validateAddress(this.state.address, this.state.cityStateZip)
+            .then(response => response.json())
+            .then(jsondata => {
+                this.setState({
+                    addressValidity: jsondata.ErrorCode === 0,
+                    addressErrorMessage: jsondata.ErrorMessage
+                })
+            })
     }
 
     render() {
@@ -79,8 +98,9 @@ export class ShipInfoFormComponent extends React.Component {
                 label="Address"
                 type={"text"}
                 onChange={this.inputValueToState.bind(this)}
-                onValid={true}
+                onValid={this.state.addressValidity}
                 placeholder="1234 Main St"
+                errorMessage={this.state.addressErrorMessage}
             />
             <InputComponent
                 id="cityStateZip"
@@ -88,8 +108,9 @@ export class ShipInfoFormComponent extends React.Component {
                 label="City, State, Zip"
                 type="text"
                 onChange={this.inputValueToState.bind(this)}
-                onValid={true}
+                onValid={this.state.addressValidity}
                 placeholder="ASBURY PARK, NJ 07712-6086 "
+                errorMessage={this.state.addressErrorMessage}
             />
             <InputComponent
                 id="email"
