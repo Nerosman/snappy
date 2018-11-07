@@ -117,7 +117,7 @@ export class ShipInfoFormComponent extends React.Component {
                 onValid={this.state.specialNotesValidity}
                 errorMessage="Length of special notes must be less then 500  charts"
             />
-            <Button onClick={this.submitForm.bind(this)}>Submit</Button>
+            <Button id="submit-ship-info-button" onClick={this.submitForm.bind(this)}>Submit</Button>
         </Form>
     }
 }
