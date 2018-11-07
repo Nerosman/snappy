@@ -9,14 +9,18 @@ export const validateLengthOfValue = (value, length) => {
 
 export const validateAddress = async (address1, address2) => {
     if(address1 && address2) {
-        return await fetch(`http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`, {
-            mode: "cors",
-            headers: {
-                "Accept": "application/json",
-                "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,OPTIONS",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers": "Content-Type"
+        // return await fetch(`http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`, {
+        //     mode: "cors"
+        // })
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+                console.log(xhttp)
             }
-        })
+        };
+        xhttp.open("GET", `http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`, true);
+        xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+        xhttp.send();
     }
 };
