@@ -2,6 +2,7 @@ import React from "react";
 import {InputComponent} from "../reusableComponents/InputComponent";
 import {Button, Form} from "reactstrap";
 import {validateAddress, validateEmail, validateLengthOfValue} from "../../utils/validations";
+import {toast} from "react-toastify";
 
 export class ShipInfoFormComponent extends React.Component {
     constructor(props) {
@@ -11,8 +12,14 @@ export class ShipInfoFormComponent extends React.Component {
             phoneValidity: true,
             specialNotesValidity: true,
             addressValidity: true,
-            address: "",
-            cityStateZip: ""
+            address1: "",
+            address2: "",
+            firstName: "",
+            secondName: "",
+            phone: "",
+            specialNotes: "",
+            email: ""
+
         }
     }
 
@@ -49,14 +56,14 @@ export class ShipInfoFormComponent extends React.Component {
 
     submitForm() {
         console.log(this.state);
-            // validateAddress(this.state.address, this.state.cityStateZip)
-            //     .then(response => response.json())
-            //     .then(jsondata => {
-            //         this.setState({
-            //             addressValidity: jsondata.ErrorCode === 0,
-            //             addressErrorMessage: jsondata.ErrorMessage
-            //         })
-            //     })
+        // validateAddress(this.state.address, this.state.cityStateZip)
+        //     .then(response => response.json())
+        //     .then(jsondata => {
+        //         this.setState({
+        //             addressValidity: jsondata.ErrorCode === 0,
+        //             addressErrorMessage: jsondata.ErrorMessage
+        //         })
+        //     })
         return fetch("orderList", {
             method: "POST",
             mode: "cors",
@@ -68,6 +75,11 @@ export class ShipInfoFormComponent extends React.Component {
             redirect: "follow", // manual, *follow, error
             referrer: "no-referrer", // no-referrer, *client
             body: JSON.stringify(this.state),
+        }).then((res) => {
+            res.status === 200 && toast("Your date has been save successfully", {
+                position: toast.POSITION.BOTTOM_RIGHT,
+                type: "success"
+            })
         })
     }
 

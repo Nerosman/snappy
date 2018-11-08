@@ -1,6 +1,7 @@
 import React from "react";
 import {NavBarHeaderComponent} from "./NavBarHeader";
-import {Col, Container} from "reactstrap";
+import {Col} from "reactstrap";
+import {ToastContainer} from "react-toastify";
 
 export const MainComponent = ({className, children}) => {
     return <div className={className}>
@@ -8,5 +9,6 @@ export const MainComponent = ({className, children}) => {
             <NavBarHeaderComponent/>
         </Col>
         {children}
+        <ToastContainer />
     </div>
 };

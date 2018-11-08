@@ -88,3 +88,7 @@ legend {
 #header {
     padding: 0;
 }
+
+.table-responsive {
+   max-height: 70vh;
+}

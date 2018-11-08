@@ -10,7 +10,7 @@ export const NavItemsComponent = () => {
             </NavItem>;
         case "/admin-panel":
             return <NavItem>
-                <Link className="nav-link" to="/ship-info">Create order</Link>
+                <Link className="nav-link" to="/ship-info">Get gift</Link>
             </NavItem>;
         default :
             return <React.Fragment>
@@ -18,7 +18,7 @@ export const NavItemsComponent = () => {
                     <Link className="nav-link" to="/admin-panel">Admin panel</Link>
                 </NavItem>
                 <NavItem>
-                    <Link className="nav-link" to="/ship-info">Create order</Link>
+                    <Link className="nav-link" to="/ship-info">Get gift</Link>
                 </NavItem>
             </React.Fragment>
     }
