@@ -7,8 +7,6 @@ export const MainComponent = ({className, children}) => {
         <Col id="header" lg={12}>
             <NavBarHeaderComponent/>
         </Col>
-        <Container fluid>
-            {children}
-        </Container>
+        {children}
     </div>
 };

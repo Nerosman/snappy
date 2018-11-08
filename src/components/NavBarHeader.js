@@ -1,5 +1,7 @@
 import React from 'react';
-import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from 'reactstrap';
+import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler} from 'reactstrap';
+import {TitleComponent} from "./TitleComponent";
+import {NavItemsComponent} from "./NavItemsComponent";
 
 export class NavBarHeaderComponent extends React.Component {
     constructor(props) {
@@ -19,16 +21,11 @@ export class NavBarHeaderComponent extends React.Component {
         return (
             <div>
                 <Navbar color="white" light expand="md">
-                    <NavbarBrand href="/">Snappy</NavbarBrand>
+                    <NavbarBrand href="/"><TitleComponent/></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                            </NavItem>
+                            <NavItemsComponent />
                         </Nav>
                     </Collapse>
                 </Navbar>

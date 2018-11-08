@@ -49,14 +49,14 @@ export class ShipInfoFormComponent extends React.Component {
 
     submitForm() {
         console.log(this.state);
-        // validateAddress(this.state.address, this.state.cityStateZip)
-        //     .then(response => response.json())
-        //     .then(jsondata => {
-        //         this.setState({
-        //             addressValidity: jsondata.ErrorCode === 0,
-        //             addressErrorMessage: jsondata.ErrorMessage
-        //         })
-        //     })
+            // validateAddress(this.state.address, this.state.cityStateZip)
+            //     .then(response => response.json())
+            //     .then(jsondata => {
+            //         this.setState({
+            //             addressValidity: jsondata.ErrorCode === 0,
+            //             addressErrorMessage: jsondata.ErrorMessage
+            //         })
+            //     })
         return fetch("orderList", {
             method: "POST",
             mode: "cors",

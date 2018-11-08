@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Row} from 'reactstrap';
+import {Col, Row, Container} from 'reactstrap';
 import {AdminPanelTableComponent} from "./AdminPanelTableComponent";
 
 export class AdminPanelComponent extends Component {
@@ -21,11 +21,12 @@ export class AdminPanelComponent extends Component {
     }
 
     render() {
-        return <Row lg={12}>
-            <Col lg={{size: 10, offset: 1}} className="well">
-                <legend>Snappy gifts order list</legend>
-                <AdminPanelTableComponent orderList={this.state.orderList}/>
-            </Col>
-        </Row>
+        return <Container fluid>
+            <Row lg={12}>
+                <Col lg={{size: 10, offset: 1}} className="well">
+                    <AdminPanelTableComponent orderList={this.state.orderList}/>
+                </Col>
+            </Row>
+        </Container>
     }
 }
