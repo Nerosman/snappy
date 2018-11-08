@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {ShipInfoComponent} from "./components/shipInfo/ShipInfoComponent";
 import {MainComponent} from "./components/MainComponent";
+import {AdminPanelComponent} from "./components/adminPanel/AdminPanelComponent";
 
 class App extends Component {
     render() {
@@ -11,6 +12,7 @@ class App extends Component {
                 <MainComponent className="App">
                     <Switch>
                         <Route path="/ship-info" component={ShipInfoComponent}/>
+                        <Route path="/admin-panel" component={AdminPanelComponent}/>
                     </Switch>
                 </MainComponent>
             </Router>
