@@ -9,10 +9,10 @@ const routes = require('./api/routes/orderListRoutes');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://root:qwerty201@ds253783.mlab.com:53783/snappy-orders', { useNewUrlParser: true });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-routes(app); //register the route
+routes(app);
 
 app.listen(port);
 

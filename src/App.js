@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import {ShipInfoComponent} from "./components/ShipInfoComponent";
+import {ShipInfoComponent} from "./components/shipInfo/ShipInfoComponent";
 import {MainComponent} from "./components/MainComponent";
 
 class App extends Component {

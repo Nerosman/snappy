@@ -1,7 +1,7 @@
 import React from "react";
-import {InputComponent} from "./reusableComponents/InputComponent";
+import {InputComponent} from "../reusableComponents/InputComponent";
 import {Button, Form} from "reactstrap";
-import {validateAddress, validateEmail, validateLengthOfValue} from "../utils/validations";
+import {validateAddress, validateEmail, validateLengthOfValue} from "../../utils/validations";
 
 export class ShipInfoFormComponent extends React.Component {
     constructor(props) {
@@ -15,19 +15,6 @@ export class ShipInfoFormComponent extends React.Component {
             cityStateZip: ""
         }
     }
-
-    componentDidMount() {
-        this.callApi()
-            .then(res => this.setState({ response: res.express }))
-            .catch(err => console.log(err));
-    }
-
-    async callApi(){
-        const response = await fetch('/api/hello');
-        const body = await response.json();
-        if (response.status !== 200) throw Error(body.message);
-        return body;
-    };
 
     inputValueToState(e) {
         this.setState({[e.target.name]: e.target.value})
@@ -62,14 +49,26 @@ export class ShipInfoFormComponent extends React.Component {
 
     submitForm() {
         console.log(this.state);
-        validateAddress(this.state.address, this.state.cityStateZip)
-            .then(response => response.json())
-            .then(jsondata => {
-                this.setState({
-                    addressValidity: jsondata.ErrorCode === 0,
-                    addressErrorMessage: jsondata.ErrorMessage
-                })
-            })
+        // validateAddress(this.state.address, this.state.cityStateZip)
+        //     .then(response => response.json())
+        //     .then(jsondata => {
+        //         this.setState({
+        //             addressValidity: jsondata.ErrorCode === 0,
+        //             addressErrorMessage: jsondata.ErrorMessage
+        //         })
+        //     })
+        return fetch("orderList", {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+            },
+            redirect: "follow", // manual, *follow, error
+            referrer: "no-referrer", // no-referrer, *client
+            body: JSON.stringify(this.state),
+        })
     }
 
     render() {
@@ -85,7 +84,7 @@ export class ShipInfoFormComponent extends React.Component {
             />
             <InputComponent
                 id="second-name"
-                name="secondValue"
+                name="secondName"
                 label="Second name"
                 type={"text"}
                 onChange={this.inputValueToState.bind(this)}
@@ -94,7 +93,7 @@ export class ShipInfoFormComponent extends React.Component {
             />
             <InputComponent
                 id="address"
-                name="address"
+                name="address1"
                 label="Address"
                 type={"text"}
                 onChange={this.inputValueToState.bind(this)}
@@ -104,7 +103,7 @@ export class ShipInfoFormComponent extends React.Component {
             />
             <InputComponent
                 id="cityStateZip"
-                name="cityStateZip"
+                name="address2"
                 label="City, State, Zip"
                 type="text"
                 onChange={this.inputValueToState.bind(this)}
