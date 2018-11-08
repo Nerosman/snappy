@@ -92,3 +92,7 @@ legend {
 .table-responsive {
    max-height: 70vh;
 }
+
+.error-text {
+    color: darkred;
+}

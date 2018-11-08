@@ -12,6 +12,10 @@ export class ShipInfoFormComponent extends React.Component {
             phoneValidity: true,
             specialNotesValidity: true,
             addressValidity: true,
+            address1Validity: true,
+            address2Validity: true,
+            firstNameValidity: true,
+            secondNameValidity: true,
             address1: "",
             address2: "",
             firstName: "",
@@ -55,31 +59,47 @@ export class ShipInfoFormComponent extends React.Component {
     }
 
     submitForm() {
-        console.log(this.state);
-        // validateAddress(this.state.address, this.state.cityStateZip)
-        //     .then(response => response.json())
-        //     .then(jsondata => {
-        //         this.setState({
-        //             addressValidity: jsondata.ErrorCode === 0,
-        //             addressErrorMessage: jsondata.ErrorMessage
-        //         })
-        //     })
-        return fetch("orderList", {
-            method: "POST",
-            mode: "cors",
-            cache: "no-cache",
-            credentials: "same-origin",
-            headers: {
-                "Content-Type": "application/json; charset=utf-8",
-            },
-            redirect: "follow", // manual, *follow, error
-            referrer: "no-referrer", // no-referrer, *client
-            body: JSON.stringify(this.state),
-        }).then((res) => {
-            res.status === 200 && toast("Your date has been save successfully", {
-                position: toast.POSITION.BOTTOM_RIGHT,
-                type: "success"
-            })
+        let inputsValidity = [];
+
+        let checkInputEmptyValidity = async () => {
+            for (let key in this.state) {
+                if (!key.includes("Validity")) {
+                    this.setState({
+                        [key + "Validity"]: !!this.state[key]
+                    })
+                }
+            }
+            return this.state;
+        };
+
+        checkInputEmptyValidity().then((res)=>{
+            console.log(res);
+            const isFormNonValid = inputsValidity.includes(false);
+
+            if (isFormNonValid) {
+                toast("Something went wrong. Please check your data", {
+                    position: toast.POSITION.BOTTOM_RIGHT,
+                    type: "error"
+                })
+            } else {
+                return fetch("orderList", {
+                    method: "POST",
+                    mode: "cors",
+                    cache: "no-cache",
+                    credentials: "same-origin",
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8",
+                    },
+                    redirect: "follow", // manual, *follow, error
+                    referrer: "no-referrer", // no-referrer, *client
+                    body: JSON.stringify(this.state),
+                }).then((res) => {
+                    res.status === 200 && toast("Your date has been save successfully", {
+                        position: toast.POSITION.BOTTOM_RIGHT,
+                        type: "success"
+                    })
+                })
+            }
         })
     }
 
@@ -91,8 +111,9 @@ export class ShipInfoFormComponent extends React.Component {
                 label="First name"
                 type="text"
                 onChange={this.inputValueToState.bind(this)}
-                onValid={true}
+                onValid={this.state.firstNameValidity}
                 placeholder="John"
+                errorMessage={"Input cannot be empty"}
             />
             <InputComponent
                 id="second-name"
@@ -100,8 +121,9 @@ export class ShipInfoFormComponent extends React.Component {
                 label="Second name"
                 type={"text"}
                 onChange={this.inputValueToState.bind(this)}
-                onValid={true}
+                onValid={this.state.secondNameValidity}
                 placeholder="Whiskey"
+                errorMessage={"Input cannot be empty"}
             />
             <InputComponent
                 id="address"
@@ -109,9 +131,9 @@ export class ShipInfoFormComponent extends React.Component {
                 label="Address"
                 type={"text"}
                 onChange={this.inputValueToState.bind(this)}
-                onValid={this.state.addressValidity}
+                onValid={this.state.addressValidity && this.state.address1Validity}
                 placeholder="1234 Main St"
-                errorMessage={this.state.addressErrorMessage}
+                errorMessage={this.state.addressErrorMessage || "Input cannot be empty"}
             />
             <InputComponent
                 id="cityStateZip"
@@ -119,9 +141,9 @@ export class ShipInfoFormComponent extends React.Component {
                 label="City, State, Zip"
                 type="text"
                 onChange={this.inputValueToState.bind(this)}
-                onValid={this.state.addressValidity}
+                onValid={this.state.addressValidity && this.state.address2Validity}
                 placeholder="ASBURY PARK, NJ 07712-6086 "
-                errorMessage={this.state.addressErrorMessage}
+                errorMessage={this.state.addressErrorMessage || "Input cannot be empty"}
             />
             <InputComponent
                 id="email"
