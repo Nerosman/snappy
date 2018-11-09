@@ -1,5 +1,3 @@
-import React from "react";
-
 export const TitleComponent = () => {
     switch (window.location.pathname) {
         case '/ship-info':

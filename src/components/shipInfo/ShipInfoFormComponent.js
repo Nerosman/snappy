@@ -3,7 +3,7 @@ import {InputComponent} from "../reusableComponents/InputComponent";
 import {Button, Form} from "reactstrap";
 import {validateAddress, validateEmail, validateLengthOfValue} from "../../utils/validations";
 import {toast} from "react-toastify";
-import {getOrderList} from "../../communicator";
+import {addOrderRequest} from "../../communicator";
 
 export class ShipInfoFormComponent extends React.Component {
     constructor(props) {
@@ -61,7 +61,7 @@ export class ShipInfoFormComponent extends React.Component {
 
     submitForm(e) {
         e.preventDefault();
-        // validateAddress(this.state.address, this.state.cityStateZip)
+        // validateAddress(this.state.address1, this.state.address2)
         //     .then(response => response.json())
         //     .then(jsondata => {
         //         this.setState({
@@ -85,7 +85,7 @@ export class ShipInfoFormComponent extends React.Component {
                 type: "error"
             })
         } else {
-            getOrderList().then((res) => {
+            addOrderRequest(this.state).then((res) => {
                 res.status === 200 && toast("Your date has been save successfully", {
                     position: toast.POSITION.BOTTOM_RIGHT,
                     type: "success"

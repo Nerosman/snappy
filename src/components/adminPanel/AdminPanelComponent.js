@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Row, Container} from 'reactstrap';
 import {AdminPanelTableComponent} from "./AdminPanelTableComponent";
+import {getOrderListRequest} from "../../communicator";
 
 export class AdminPanelComponent extends Component {
     constructor(props) {
@@ -11,8 +12,7 @@ export class AdminPanelComponent extends Component {
     }
 
     componentDidMount() {
-        fetch("/orderList")
-            .then(response => response.json())
+        getOrderListRequest().then(response => response.json())
             .then((orderList) => {
                 return this.setState({
                     orderList

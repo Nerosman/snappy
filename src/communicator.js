@@ -1,4 +1,4 @@
-export const getOrderList = () => {
+export const addOrderRequest = (state) => {
     return fetch("orderList", {
         method: "POST",
         mode: "cors",
@@ -7,8 +7,16 @@ export const getOrderList = () => {
         headers: {
             "Content-Type": "application/json; charset=utf-8",
         },
-        redirect: "follow", // manual, *follow, error
-        referrer: "no-referrer", // no-referrer, *client
-        body: JSON.stringify(this.state),
+        redirect: "follow",
+        referrer: "no-referrer",
+        body: JSON.stringify(state),
     })
+};
+
+export const getOrderListRequest = () => {
+    return fetch("/orderList")
+};
+
+export const validateAddressRequest = (address1, address2) => {
+    return fetch(`http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`);
 };
