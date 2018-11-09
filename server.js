@@ -5,12 +5,15 @@ const mongoose = require('mongoose');
 const OrderList = require('./api/models/orderListModel');
 const bodyParser = require('body-parser');
 const routes = require('./api/routes/orderListRoutes');
+const cors = require('cors');
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://root:qwerty201@ds253783.mlab.com:53783/snappy-orders', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 routes(app);
 
