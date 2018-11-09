@@ -14,7 +14,8 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "react-toastify": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,7 +34,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "nodemon": "^1.18.6",
-    "react-toastify": "^4.4.0"
+    "nodemon": "^1.18.6"
   }
 }
