@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 const mongoose = require('mongoose');
-const Task = require('./api/models/orderListModel');
+const OrderList = require('./api/models/orderListModel');
 const bodyParser = require('body-parser');
 const routes = require('./api/routes/orderListRoutes');
 

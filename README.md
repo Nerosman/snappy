@@ -1,44 +1,87 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Running application:** 
+1) Starting node server
+    `npm run startServer`
+2) Running development server
+    `npm run start`
+3) Running production bundles
+    `npm run build`
 
-## Available Scripts
+**Front-end documentation:**
 
-In the project directory, you can run:
+1. `index.js` - keep functionality to render app
 
-### `npm start`
+2. `App.js` main component, provide routing
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    `<Route exact path="/" component={HomePageComponent}/>` - route to home page
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+    `<Route path="/ship-info" component={ShipInfoComponent}/>` - route to page with form for order creation
 
-### `npm test`
+    `<Route path="/admin-panel" component={AdminPanelComponent}/>` - route to table with all orders
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. `App.css` keep all styles for app
 
-### `npm run build`
+4. `communicator.js` - contain all requests
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. `setupProxy.js`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+    `app.use(proxy("/orderList", { target: "http://localhost:5000/", "secure": false, "changeOrigin": true}));` - proxy for api
+    
+6. `utils/validations.js` - keep all validations for App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. directory `components` contain all components for app
 
-### `npm run eject`
+    1. adminPanel - contain into table with all orders
+    2. homePage - contain into table with all orders
+    3. reusableComponents - contain into InputComponent
+    4. shipInfo - contain into form for order creation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+8. `MainComponent.js` container component for all routes, contain into NavBarHeader
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+9. `NavBarHeader.js` component for header
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+10. `NavItemsComponent.js` component which return navigation items depends on window.location
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+11. `TitleComponent.js` component which return title for Header depends on window.location
 
-## Learn More
+12. `adminPanel/AdminPanelComponent.js` container component for table with all orders 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    _first get json from response, then set into state this list_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+            getOrderListRequest().then(response => response.json())
+                .then((orderList) => {
+                    return this.setState({
+                        orderList
+                    })
+                })  
+
+    _pass this list as props to table_
+            
+        <AdminPanelTableComponent orderList={this.state.orderList}/>
+
+13. `adminPanel/AdminPanelComponent.js` table with all orders
+
+    `orderList.length > 0` then render table, in other case render div with message `<div>There is no data to display</div>`
+
+14. `homePage/HomePageComponent.js` home page with welcome info
+
+15. `reusableComponent/InputComponent.js` contain reusable input component, which provide the possibility use any type of input, custom message for validation...
+
+16. `shipInfo/ShipInfoComponent.js` component with form for creating new order
+
+**Back-end documentation:**
+
+1. `server.js` - contain entry point for express server
+    
+    `const port = process.env.PORT || 5000; ` - set port
+    
+    `const OrderList = require('./api/models/orderListModel');` - get model
+    
+    `const bodyParser = require('body-parser');` - added for parse JSON by default
+    
+    `mongoose.connect(...);` - connect to dataBase
+    
+2. `api/models/orderListModel` - contain mongoose schema for saving into dataBase
+
+3. `api/controllers/orderListController` - contain two requests all_order_list (for getting all list) and create_order (for create one order)
+
+4. `api/routes/orderListRoutes` - contain one route "/orderList" with possibility to get and post
