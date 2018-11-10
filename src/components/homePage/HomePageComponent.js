@@ -11,4 +11,4 @@ export const HomePageComponent = () => {
             <Link to="/ship-info"><Button>Get gift</Button></Link>
         </p>
     </Jumbotron>
-}
+};

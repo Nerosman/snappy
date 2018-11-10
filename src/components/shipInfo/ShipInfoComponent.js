@@ -95,6 +95,7 @@ export class ShipInfoComponent extends React.Component {
                             name="firstName"
                             label="First name"
                             type="text"
+                            value={this.state.firstName}
                             onChange={this.inputValueToState.bind(this)}
                             onValid={this.state.firstNameValidity}
                             placeholder="John"
@@ -106,6 +107,7 @@ export class ShipInfoComponent extends React.Component {
                             name="secondName"
                             label="Second name"
                             type={"text"}
+                            value={this.state.secondName}
                             onChange={this.inputValueToState.bind(this)}
                             onValid={this.state.secondNameValidity}
                             placeholder="Whiskey"
@@ -117,6 +119,7 @@ export class ShipInfoComponent extends React.Component {
                             name="address1"
                             label="Address"
                             type={"text"}
+                            value={this.state.address1}
                             onChange={this.inputValueToState.bind(this)}
                             onValid={this.state.address1Validity}
                             placeholder="1234 Main St"
@@ -128,6 +131,7 @@ export class ShipInfoComponent extends React.Component {
                             name="address2"
                             label="City, State, Zip"
                             type="text"
+                            value={this.state.address2}
                             onChange={this.inputValueToState.bind(this)}
                             onValid={this.state.address2Validity}
                             placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -139,6 +143,7 @@ export class ShipInfoComponent extends React.Component {
                             name="email"
                             label="Email"
                             type={"email"}
+                            value={this.state.email}
                             onChange={this.emailParameterToState.bind(this)}
                             onValid={this.state.emailValidity}
                             errorMessage="Please include @ and . in the email address"
@@ -148,6 +153,7 @@ export class ShipInfoComponent extends React.Component {
                             id="phone"
                             name="phone"
                             label="Phone"
+                            value={this.state.phone}
                             onChange={this.phoneParameterToState.bind(this)}
                             onValid={this.state.phoneValidity}
                             errorMessage="Length of phone number must be less then 10 charts"
@@ -158,6 +164,7 @@ export class ShipInfoComponent extends React.Component {
                             name="specialNotes"
                             label="Special notes"
                             type={"textarea"}
+                            value={this.state.specialNotes}
                             onChange={this.specialNotesToState.bind(this)}
                             onValid={this.state.specialNotesValidity}
                             errorMessage="Length of special notes must be less then 500  charts"
