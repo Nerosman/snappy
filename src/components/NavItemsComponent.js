@@ -22,4 +22,4 @@ export const NavItemsComponent = () => {
                 </NavItem>
             </React.Fragment>
     }
-}
+};

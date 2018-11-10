@@ -2,7 +2,7 @@ import React from 'react';
 import {Table} from "reactstrap"
 
 export const AdminPanelTableComponent = ({orderList}) => {
-    return orderList.length > 0 ? <Table responsive>
+    return orderList && orderList.length > 0 ? <Table responsive>
         <thead>
         <tr>
             <th>#</th>
