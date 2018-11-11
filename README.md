@@ -27,6 +27,7 @@
 5. `setupProxy.js`
 
     `app.use(proxy("/orderList", { target: "http://localhost:5000/", "secure": false, "changeOrigin": true}));` - proxy for api
+    `app.use(proxy("/api/address", {target: "http://www.yaddress.net/", "changeOrigin": true}))` - proxy for address validation
     
 6. `utils/validations.js` - keep all validations for App
 
