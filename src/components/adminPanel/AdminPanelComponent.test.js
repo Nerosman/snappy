@@ -9,7 +9,7 @@ import jest from "jest-mock";
 configure({ adapter: new Adapter() });
 
 describe("component <AdminPanelComponent />", ()=>{
-    it('render div into AdminPanelComponent without crashing', () => {
+    it('render div into without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<AdminPanelComponent />, div);
         ReactDOM.unmountComponentAtNode(div);
@@ -27,7 +27,7 @@ describe("component <AdminPanelComponent />", ()=>{
 
     it('could save orderList to state', ()=> {
         const wrapper = shallow(<AdminPanelComponent />);
-        const orderList = [{firstName: "Bohdan", secondName: "Yuzyfyshyn", address1: "Kn. Olgy 12", address2: "Lviv", email: "nerosman2601@gmail.com", phone: "0937680642"}];
+        const orderList = [{firstName: "Bohdan", secondName: "Yuzyfyshyn", address1: "Kn. Olgy 12", address2: "Lviv", email: "nerosman2601@gmail.com", phone: "0323212323"}];
         const instance = wrapper.instance();
         jest.spyOn(instance, 'setOrderListToState');
         instance.setOrderListToState(orderList);

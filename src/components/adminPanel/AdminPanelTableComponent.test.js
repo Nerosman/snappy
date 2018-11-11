@@ -19,7 +19,7 @@ describe("component <AdminPanelTableComponent />", ()=>{
     });
 
     it('render AdminPanelTableComponent with table', () => {
-        const wrapper = shallow(<AdminPanelTableComponent orderList={[{firstName: "Bohdan", secondName: "Yuzyfyshyn", address1: "Kn. Olgy 12", address2: "Lviv", email: "nerosman2601@gmail.com", phone: "0937680642"}]}/>);
+        const wrapper = shallow(<AdminPanelTableComponent orderList={[{firstName: "Bohdan", secondName: "Yuzyfyshyn", address1: "Kn. Olgy 12", address2: "Lviv", email: "nerosman2601@gmail.com", phone: "0323212323"}]}/>);
         expect(wrapper)
     });
 
