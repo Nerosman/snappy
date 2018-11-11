@@ -28,7 +28,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "CI=true react-scripts test --coverage --env=jsdom",
-    "eject": "react-scripts eject",
     "startServer": "nodemon server.js"
   },
   "eslintConfig": {

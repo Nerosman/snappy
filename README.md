@@ -5,6 +5,8 @@
     `npm run start`
 3) Running production bundles
     `npm run build`
+4) Running test
+    `npm run test`
 
 **Front-end documentation:**
 
