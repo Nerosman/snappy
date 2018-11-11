@@ -18,14 +18,15 @@ export class NavBarHeaderComponent extends React.Component {
         });
     }
     render() {
+        const {pathname} = window.location;
         return (
             <div>
                 <Navbar color="white" light expand="md">
-                    <NavbarBrand href="/"><TitleComponent/></NavbarBrand>
+                    <NavbarBrand href="/"><TitleComponent pathname={pathname}/></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                            <NavItemsComponent />
+                            <NavItemsComponent pathname={pathname}/>
                         </Nav>
                     </Collapse>
                 </Navbar>

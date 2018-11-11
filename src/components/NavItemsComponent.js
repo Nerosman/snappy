@@ -2,8 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {NavItem} from "reactstrap";
 
-export const NavItemsComponent = () => {
-    switch (window.location.pathname) {
+export const NavItemsComponent = ({pathname}) => {
+    switch (pathname) {
         case "/ship-info":
             return <NavItem>
                 <Link className="nav-link" to="/admin-panel">Admin panel</Link>

@@ -14,10 +14,15 @@ export class AdminPanelComponent extends Component {
     componentDidMount() {
         getOrderListRequest().then(response => response.json())
             .then((orderList) => {
-                return this.setState({
-                    orderList
-                })
+                return this.setOrderListToState(orderList)
             })
+    }
+
+
+    setOrderListToState(orderList) {
+        return this.setState({
+            orderList
+        })
     }
 
     render() {

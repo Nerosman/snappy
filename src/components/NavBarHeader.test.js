@@ -1,5 +1,4 @@
 import {configure, shallow} from "enzyme/build";
-import {ShipInfoComponent} from "./shipInfo/ShipInfoComponent";
 import jest from "jest-mock";
 import React from "react";
 import Adapter from "enzyme-adapter-react-16/build";
