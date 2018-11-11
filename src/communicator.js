@@ -17,6 +17,6 @@ export const getOrderListRequest = () => {
     return fetch("/orderList")
 };
 
-// export const validateAddressRequest = (address1, address2) => {
-//     return fetch(`http://www.yaddress.net/api/address?AddressLine1=${address1}&AddressLine2=${address2}+Prk+NJ&UserKey=`);
-// };
+export const validateAddressRequest = async (address1, address2) => {
+    return fetch(`/api/address?AddressLine1=${address1}&&AddressLine2=${address2}&+Prk+NJ&UserKey=`)
+};

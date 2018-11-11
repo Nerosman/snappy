@@ -1,7 +1,7 @@
 import React from "react";
 import {FormGroup, Input, Label} from "reactstrap";
 
-export const InputComponent = ({value, onChange, label, name, type, disabled, onValid, errorMessage, id, placeholder, required = false}) => (
+export const InputComponent = ({value, onChange, label, name, type, disabled, onValid, errorMessage, id, placeholder, required = false, onBlur}) => (
     <FormGroup row>
         <Label for={id}>{label}</Label>
         <Input
@@ -14,6 +14,7 @@ export const InputComponent = ({value, onChange, label, name, type, disabled, on
             disabled={disabled}
             invalid={!onValid}
             required={required}
+            onBlur={onBlur}
         />
         {!onValid ? <div className="error-text">
             {errorMessage}

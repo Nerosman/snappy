@@ -85,6 +85,7 @@ ShallowWrapper {
               id="cityStateZip"
               label="City, State, Zip"
               name="address2"
+              onBlur={[Function]}
               onChange={[Function]}
               onValid={true}
               placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -113,6 +114,7 @@ ShallowWrapper {
               onValid={true}
               placeholder="0329232943"
               required={true}
+              type="text"
               value=""
             />
             <InputComponent
@@ -209,6 +211,7 @@ ShallowWrapper {
               id="cityStateZip"
               label="City, State, Zip"
               name="address2"
+              onBlur={[Function]}
               onChange={[Function]}
               onValid={true}
               placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -237,6 +240,7 @@ ShallowWrapper {
               onValid={true}
               placeholder="0329232943"
               required={true}
+              type="text"
               value=""
             />
             <InputComponent
@@ -313,6 +317,7 @@ ShallowWrapper {
               id="cityStateZip"
               label="City, State, Zip"
               name="address2"
+              onBlur={[Function]}
               onChange={[Function]}
               onValid={true}
               placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -341,6 +346,7 @@ ShallowWrapper {
               onValid={true}
               placeholder="0329232943"
               required={true}
+              type="text"
               value=""
             />
             <InputComponent
@@ -424,6 +430,7 @@ ShallowWrapper {
                 id="cityStateZip"
                 label="City, State, Zip"
                 name="address2"
+                onBlur={[Function]}
                 onChange={[Function]}
                 onValid={true}
                 placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -452,6 +459,7 @@ ShallowWrapper {
                 onValid={true}
                 placeholder="0329232943"
                 required={true}
+                type="text"
                 value=""
               />,
               <InputComponent
@@ -547,6 +555,7 @@ ShallowWrapper {
                 "id": "cityStateZip",
                 "label": "City, State, Zip",
                 "name": "address2",
+                "onBlur": [Function],
                 "onChange": [Function],
                 "onValid": true,
                 "placeholder": "ASBURY PARK, NJ 07712-6086 ",
@@ -591,6 +600,7 @@ ShallowWrapper {
                 "onValid": true,
                 "placeholder": "0329232943",
                 "required": true,
+                "type": "text",
                 "value": "",
               },
               "ref": null,
@@ -713,6 +723,7 @@ ShallowWrapper {
                 id="cityStateZip"
                 label="City, State, Zip"
                 name="address2"
+                onBlur={[Function]}
                 onChange={[Function]}
                 onValid={true}
                 placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -741,6 +752,7 @@ ShallowWrapper {
                 onValid={true}
                 placeholder="0329232943"
                 required={true}
+                type="text"
                 value=""
               />
               <InputComponent
@@ -837,6 +849,7 @@ ShallowWrapper {
                 id="cityStateZip"
                 label="City, State, Zip"
                 name="address2"
+                onBlur={[Function]}
                 onChange={[Function]}
                 onValid={true}
                 placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -865,6 +878,7 @@ ShallowWrapper {
                 onValid={true}
                 placeholder="0329232943"
                 required={true}
+                type="text"
                 value=""
               />
               <InputComponent
@@ -941,6 +955,7 @@ ShallowWrapper {
                 id="cityStateZip"
                 label="City, State, Zip"
                 name="address2"
+                onBlur={[Function]}
                 onChange={[Function]}
                 onValid={true}
                 placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -969,6 +984,7 @@ ShallowWrapper {
                 onValid={true}
                 placeholder="0329232943"
                 required={true}
+                type="text"
                 value=""
               />
               <InputComponent
@@ -1052,6 +1068,7 @@ ShallowWrapper {
                   id="cityStateZip"
                   label="City, State, Zip"
                   name="address2"
+                  onBlur={[Function]}
                   onChange={[Function]}
                   onValid={true}
                   placeholder="ASBURY PARK, NJ 07712-6086 "
@@ -1080,6 +1097,7 @@ ShallowWrapper {
                   onValid={true}
                   placeholder="0329232943"
                   required={true}
+                  type="text"
                   value=""
                 />,
                 <InputComponent
@@ -1175,6 +1193,7 @@ ShallowWrapper {
                   "id": "cityStateZip",
                   "label": "City, State, Zip",
                   "name": "address2",
+                  "onBlur": [Function],
                   "onChange": [Function],
                   "onValid": true,
                   "placeholder": "ASBURY PARK, NJ 07712-6086 ",
@@ -1219,6 +1238,7 @@ ShallowWrapper {
                   "onValid": true,
                   "placeholder": "0329232943",
                   "required": true,
+                  "type": "text",
                   "value": "",
                 },
                 "ref": null,

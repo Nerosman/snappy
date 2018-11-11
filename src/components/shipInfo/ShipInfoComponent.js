@@ -12,8 +12,7 @@ export class ShipInfoComponent extends React.Component {
             emailValidity: true,
             phoneValidity: true,
             specialNotesValidity: true,
-            address1Validity: true,
-            address2Validity: true,
+            addressValidity: true,
             firstNameValidity: true,
             secondNameValidity: true,
             address1: "",
@@ -58,8 +57,24 @@ export class ShipInfoComponent extends React.Component {
         });
     }
 
+    validateAddress() {
+        const {address1, address2} = this.state;
+        address1 && address2 && validateAddress(address1, address2)
+            .then(response => response.json())
+            .then(jsondata => {
+                this.setState({
+                    addressValidity: jsondata.ErrorCode === 0,
+                    addressErrorMessage: jsondata.ErrorMessage
+                });
+                if (jsondata.ErrorCode === 0) {
+
+                }
+            })
+    }
+
     submitForm(e) {
         e.preventDefault();
+
         let inputsValidity = [];
 
         for (let key in this.state) {
@@ -121,7 +136,7 @@ export class ShipInfoComponent extends React.Component {
                             type={"text"}
                             value={this.state.address1}
                             onChange={this.inputValueToState.bind(this)}
-                            onValid={this.state.address1Validity}
+                            onValid={this.state.addressValidity}
                             placeholder="1234 Main St"
                             errorMessage={this.state.addressErrorMessage || "Input cannot be empty"}
                             required={true}
@@ -133,16 +148,18 @@ export class ShipInfoComponent extends React.Component {
                             type="text"
                             value={this.state.address2}
                             onChange={this.inputValueToState.bind(this)}
-                            onValid={this.state.address2Validity}
+                            onBlur={this.validateAddress.bind(this)}
+                            onValid={this.state.addressValidity}
                             placeholder="ASBURY PARK, NJ 07712-6086 "
                             errorMessage={this.state.addressErrorMessage || "Input cannot be empty"}
                             required={true}
                         />
+
                         <InputComponent
                             id="email"
                             name="email"
                             label="Email"
-                            type={"email"}
+                            type="email"
                             value={this.state.email}
                             onChange={this.emailParameterToState.bind(this)}
                             onValid={this.state.emailValidity}
@@ -154,6 +171,7 @@ export class ShipInfoComponent extends React.Component {
                             id="phone"
                             name="phone"
                             label="Phone"
+                            type="text"
                             value={this.state.phone}
                             onChange={this.phoneParameterToState.bind(this)}
                             onValid={this.state.phoneValidity}
