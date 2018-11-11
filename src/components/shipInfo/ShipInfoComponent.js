@@ -146,6 +146,7 @@ export class ShipInfoComponent extends React.Component {
                             value={this.state.email}
                             onChange={this.emailParameterToState.bind(this)}
                             onValid={this.state.emailValidity}
+                            placeholder="mail@gmail.com"
                             errorMessage="Please include @ and . in the email address"
                             required={true}
                         />
@@ -156,6 +157,7 @@ export class ShipInfoComponent extends React.Component {
                             value={this.state.phone}
                             onChange={this.phoneParameterToState.bind(this)}
                             onValid={this.state.phoneValidity}
+                            placeholder="0329232943"
                             errorMessage="Length of phone number must be less then 10 charts"
                             required={true}
                         />

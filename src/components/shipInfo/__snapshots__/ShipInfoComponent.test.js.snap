@@ -1,0 +1,1289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ShipInfoComponent /> render a shipInfo 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ShipInfoComponent />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Row
+        lg={12}
+        tag="div"
+      >
+        <Col
+          className="well"
+          lg={
+            Object {
+              "offset": 3,
+              "size": 6,
+            }
+          }
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Form
+            onSubmit={[Function]}
+            tag="form"
+          >
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="first-name"
+              label="First name"
+              name="firstName"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="John"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="second-name"
+              label="Second name"
+              name="secondName"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="Whiskey"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="address"
+              label="Address"
+              name="address1"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="1234 Main St"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="cityStateZip"
+              label="City, State, Zip"
+              name="address2"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="ASBURY PARK, NJ 07712-6086 "
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Please include @ and . in the email address"
+              id="email"
+              label="Email"
+              name="email"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="mail@gmail.com"
+              required={true}
+              type="email"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Length of phone number must be less then 10 charts"
+              id="phone"
+              label="Phone"
+              name="phone"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="0329232943"
+              required={true}
+              value=""
+            />
+            <InputComponent
+              errorMessage="Length of special notes must be less then 500  charts"
+              id="special-notes"
+              label="Special notes"
+              name="specialNotes"
+              onChange={[Function]}
+              onValid={true}
+              type="textarea"
+              value=""
+            />
+            <Button
+              color="secondary"
+              id="submit-ship-info-button"
+              tag="button"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </Form>
+        </Col>
+      </Row>,
+      "fluid": true,
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Col
+          className="well"
+          lg={
+            Object {
+              "offset": 3,
+              "size": 6,
+            }
+          }
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Form
+            onSubmit={[Function]}
+            tag="form"
+          >
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="first-name"
+              label="First name"
+              name="firstName"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="John"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="second-name"
+              label="Second name"
+              name="secondName"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="Whiskey"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="address"
+              label="Address"
+              name="address1"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="1234 Main St"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="cityStateZip"
+              label="City, State, Zip"
+              name="address2"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="ASBURY PARK, NJ 07712-6086 "
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Please include @ and . in the email address"
+              id="email"
+              label="Email"
+              name="email"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="mail@gmail.com"
+              required={true}
+              type="email"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Length of phone number must be less then 10 charts"
+              id="phone"
+              label="Phone"
+              name="phone"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="0329232943"
+              required={true}
+              value=""
+            />
+            <InputComponent
+              errorMessage="Length of special notes must be less then 500  charts"
+              id="special-notes"
+              label="Special notes"
+              name="specialNotes"
+              onChange={[Function]}
+              onValid={true}
+              type="textarea"
+              value=""
+            />
+            <Button
+              color="secondary"
+              id="submit-ship-info-button"
+              tag="button"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </Form>
+        </Col>,
+        "lg": 12,
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Form
+            onSubmit={[Function]}
+            tag="form"
+          >
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="first-name"
+              label="First name"
+              name="firstName"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="John"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="second-name"
+              label="Second name"
+              name="secondName"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="Whiskey"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="address"
+              label="Address"
+              name="address1"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="1234 Main St"
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Input cannot be empty"
+              id="cityStateZip"
+              label="City, State, Zip"
+              name="address2"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="ASBURY PARK, NJ 07712-6086 "
+              required={true}
+              type="text"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Please include @ and . in the email address"
+              id="email"
+              label="Email"
+              name="email"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="mail@gmail.com"
+              required={true}
+              type="email"
+              value=""
+            />
+            <InputComponent
+              errorMessage="Length of phone number must be less then 10 charts"
+              id="phone"
+              label="Phone"
+              name="phone"
+              onChange={[Function]}
+              onValid={true}
+              placeholder="0329232943"
+              required={true}
+              value=""
+            />
+            <InputComponent
+              errorMessage="Length of special notes must be less then 500  charts"
+              id="special-notes"
+              label="Special notes"
+              name="specialNotes"
+              onChange={[Function]}
+              onValid={true}
+              type="textarea"
+              value=""
+            />
+            <Button
+              color="secondary"
+              id="submit-ship-info-button"
+              tag="button"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </Form>,
+          "className": "well",
+          "lg": Object {
+            "offset": 3,
+            "size": 6,
+          },
+          "tag": "div",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="first-name"
+                label="First name"
+                name="firstName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="John"
+                required={true}
+                type="text"
+                value=""
+              />,
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="second-name"
+                label="Second name"
+                name="secondName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="Whiskey"
+                required={true}
+                type="text"
+                value=""
+              />,
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="address"
+                label="Address"
+                name="address1"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="1234 Main St"
+                required={true}
+                type="text"
+                value=""
+              />,
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="cityStateZip"
+                label="City, State, Zip"
+                name="address2"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="ASBURY PARK, NJ 07712-6086 "
+                required={true}
+                type="text"
+                value=""
+              />,
+              <InputComponent
+                errorMessage="Please include @ and . in the email address"
+                id="email"
+                label="Email"
+                name="email"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="mail@gmail.com"
+                required={true}
+                type="email"
+                value=""
+              />,
+              <InputComponent
+                errorMessage="Length of phone number must be less then 10 charts"
+                id="phone"
+                label="Phone"
+                name="phone"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="0329232943"
+                required={true}
+                value=""
+              />,
+              <InputComponent
+                errorMessage="Length of special notes must be less then 500  charts"
+                id="special-notes"
+                label="Special notes"
+                name="specialNotes"
+                onChange={[Function]}
+                onValid={true}
+                type="textarea"
+                value=""
+              />,
+              <Button
+                color="secondary"
+                id="submit-ship-info-button"
+                tag="button"
+                type="submit"
+              >
+                Submit
+              </Button>,
+            ],
+            "onSubmit": [Function],
+            "tag": "form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Input cannot be empty",
+                "id": "first-name",
+                "label": "First name",
+                "name": "firstName",
+                "onChange": [Function],
+                "onValid": true,
+                "placeholder": "John",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Input cannot be empty",
+                "id": "second-name",
+                "label": "Second name",
+                "name": "secondName",
+                "onChange": [Function],
+                "onValid": true,
+                "placeholder": "Whiskey",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Input cannot be empty",
+                "id": "address",
+                "label": "Address",
+                "name": "address1",
+                "onChange": [Function],
+                "onValid": true,
+                "placeholder": "1234 Main St",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Input cannot be empty",
+                "id": "cityStateZip",
+                "label": "City, State, Zip",
+                "name": "address2",
+                "onChange": [Function],
+                "onValid": true,
+                "placeholder": "ASBURY PARK, NJ 07712-6086 ",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Please include @ and . in the email address",
+                "id": "email",
+                "label": "Email",
+                "name": "email",
+                "onChange": [Function],
+                "onValid": true,
+                "placeholder": "mail@gmail.com",
+                "required": true,
+                "type": "email",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Length of phone number must be less then 10 charts",
+                "id": "phone",
+                "label": "Phone",
+                "name": "phone",
+                "onChange": [Function],
+                "onValid": true,
+                "placeholder": "0329232943",
+                "required": true,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "Length of special notes must be less then 500  charts",
+                "id": "special-notes",
+                "label": "Special notes",
+                "name": "specialNotes",
+                "onChange": [Function],
+                "onValid": true,
+                "type": "textarea",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Submit",
+                "color": "secondary",
+                "id": "submit-ship-info-button",
+                "tag": "button",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Row
+          lg={12}
+          tag="div"
+        >
+          <Col
+            className="well"
+            lg={
+              Object {
+                "offset": 3,
+                "size": 6,
+              }
+            }
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            <Form
+              onSubmit={[Function]}
+              tag="form"
+            >
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="first-name"
+                label="First name"
+                name="firstName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="John"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="second-name"
+                label="Second name"
+                name="secondName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="Whiskey"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="address"
+                label="Address"
+                name="address1"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="1234 Main St"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="cityStateZip"
+                label="City, State, Zip"
+                name="address2"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="ASBURY PARK, NJ 07712-6086 "
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Please include @ and . in the email address"
+                id="email"
+                label="Email"
+                name="email"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="mail@gmail.com"
+                required={true}
+                type="email"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Length of phone number must be less then 10 charts"
+                id="phone"
+                label="Phone"
+                name="phone"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="0329232943"
+                required={true}
+                value=""
+              />
+              <InputComponent
+                errorMessage="Length of special notes must be less then 500  charts"
+                id="special-notes"
+                label="Special notes"
+                name="specialNotes"
+                onChange={[Function]}
+                onValid={true}
+                type="textarea"
+                value=""
+              />
+              <Button
+                color="secondary"
+                id="submit-ship-info-button"
+                tag="button"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </Form>
+          </Col>
+        </Row>,
+        "fluid": true,
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Col
+            className="well"
+            lg={
+              Object {
+                "offset": 3,
+                "size": 6,
+              }
+            }
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            <Form
+              onSubmit={[Function]}
+              tag="form"
+            >
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="first-name"
+                label="First name"
+                name="firstName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="John"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="second-name"
+                label="Second name"
+                name="secondName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="Whiskey"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="address"
+                label="Address"
+                name="address1"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="1234 Main St"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="cityStateZip"
+                label="City, State, Zip"
+                name="address2"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="ASBURY PARK, NJ 07712-6086 "
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Please include @ and . in the email address"
+                id="email"
+                label="Email"
+                name="email"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="mail@gmail.com"
+                required={true}
+                type="email"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Length of phone number must be less then 10 charts"
+                id="phone"
+                label="Phone"
+                name="phone"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="0329232943"
+                required={true}
+                value=""
+              />
+              <InputComponent
+                errorMessage="Length of special notes must be less then 500  charts"
+                id="special-notes"
+                label="Special notes"
+                name="specialNotes"
+                onChange={[Function]}
+                onValid={true}
+                type="textarea"
+                value=""
+              />
+              <Button
+                color="secondary"
+                id="submit-ship-info-button"
+                tag="button"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </Form>
+          </Col>,
+          "lg": 12,
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Form
+              onSubmit={[Function]}
+              tag="form"
+            >
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="first-name"
+                label="First name"
+                name="firstName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="John"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="second-name"
+                label="Second name"
+                name="secondName"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="Whiskey"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="address"
+                label="Address"
+                name="address1"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="1234 Main St"
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Input cannot be empty"
+                id="cityStateZip"
+                label="City, State, Zip"
+                name="address2"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="ASBURY PARK, NJ 07712-6086 "
+                required={true}
+                type="text"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Please include @ and . in the email address"
+                id="email"
+                label="Email"
+                name="email"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="mail@gmail.com"
+                required={true}
+                type="email"
+                value=""
+              />
+              <InputComponent
+                errorMessage="Length of phone number must be less then 10 charts"
+                id="phone"
+                label="Phone"
+                name="phone"
+                onChange={[Function]}
+                onValid={true}
+                placeholder="0329232943"
+                required={true}
+                value=""
+              />
+              <InputComponent
+                errorMessage="Length of special notes must be less then 500  charts"
+                id="special-notes"
+                label="Special notes"
+                name="specialNotes"
+                onChange={[Function]}
+                onValid={true}
+                type="textarea"
+                value=""
+              />
+              <Button
+                color="secondary"
+                id="submit-ship-info-button"
+                tag="button"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </Form>,
+            "className": "well",
+            "lg": Object {
+              "offset": 3,
+              "size": 6,
+            },
+            "tag": "div",
+            "widths": Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <InputComponent
+                  errorMessage="Input cannot be empty"
+                  id="first-name"
+                  label="First name"
+                  name="firstName"
+                  onChange={[Function]}
+                  onValid={true}
+                  placeholder="John"
+                  required={true}
+                  type="text"
+                  value=""
+                />,
+                <InputComponent
+                  errorMessage="Input cannot be empty"
+                  id="second-name"
+                  label="Second name"
+                  name="secondName"
+                  onChange={[Function]}
+                  onValid={true}
+                  placeholder="Whiskey"
+                  required={true}
+                  type="text"
+                  value=""
+                />,
+                <InputComponent
+                  errorMessage="Input cannot be empty"
+                  id="address"
+                  label="Address"
+                  name="address1"
+                  onChange={[Function]}
+                  onValid={true}
+                  placeholder="1234 Main St"
+                  required={true}
+                  type="text"
+                  value=""
+                />,
+                <InputComponent
+                  errorMessage="Input cannot be empty"
+                  id="cityStateZip"
+                  label="City, State, Zip"
+                  name="address2"
+                  onChange={[Function]}
+                  onValid={true}
+                  placeholder="ASBURY PARK, NJ 07712-6086 "
+                  required={true}
+                  type="text"
+                  value=""
+                />,
+                <InputComponent
+                  errorMessage="Please include @ and . in the email address"
+                  id="email"
+                  label="Email"
+                  name="email"
+                  onChange={[Function]}
+                  onValid={true}
+                  placeholder="mail@gmail.com"
+                  required={true}
+                  type="email"
+                  value=""
+                />,
+                <InputComponent
+                  errorMessage="Length of phone number must be less then 10 charts"
+                  id="phone"
+                  label="Phone"
+                  name="phone"
+                  onChange={[Function]}
+                  onValid={true}
+                  placeholder="0329232943"
+                  required={true}
+                  value=""
+                />,
+                <InputComponent
+                  errorMessage="Length of special notes must be less then 500  charts"
+                  id="special-notes"
+                  label="Special notes"
+                  name="specialNotes"
+                  onChange={[Function]}
+                  onValid={true}
+                  type="textarea"
+                  value=""
+                />,
+                <Button
+                  color="secondary"
+                  id="submit-ship-info-button"
+                  tag="button"
+                  type="submit"
+                >
+                  Submit
+                </Button>,
+              ],
+              "onSubmit": [Function],
+              "tag": "form",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Input cannot be empty",
+                  "id": "first-name",
+                  "label": "First name",
+                  "name": "firstName",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "placeholder": "John",
+                  "required": true,
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Input cannot be empty",
+                  "id": "second-name",
+                  "label": "Second name",
+                  "name": "secondName",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "placeholder": "Whiskey",
+                  "required": true,
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Input cannot be empty",
+                  "id": "address",
+                  "label": "Address",
+                  "name": "address1",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "placeholder": "1234 Main St",
+                  "required": true,
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Input cannot be empty",
+                  "id": "cityStateZip",
+                  "label": "City, State, Zip",
+                  "name": "address2",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "placeholder": "ASBURY PARK, NJ 07712-6086 ",
+                  "required": true,
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Please include @ and . in the email address",
+                  "id": "email",
+                  "label": "Email",
+                  "name": "email",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "placeholder": "mail@gmail.com",
+                  "required": true,
+                  "type": "email",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Length of phone number must be less then 10 charts",
+                  "id": "phone",
+                  "label": "Phone",
+                  "name": "phone",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "placeholder": "0329232943",
+                  "required": true,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "errorMessage": "Length of special notes must be less then 500  charts",
+                  "id": "special-notes",
+                  "label": "Special notes",
+                  "name": "specialNotes",
+                  "onChange": [Function],
+                  "onValid": true,
+                  "type": "textarea",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Submit",
+                  "color": "secondary",
+                  "id": "submit-ship-info-button",
+                  "tag": "button",
+                  "type": "submit",
+                },
+                "ref": null,
+                "rendered": "Submit",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
