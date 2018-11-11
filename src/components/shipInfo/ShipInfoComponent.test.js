@@ -127,6 +127,4 @@ describe('<ShipInfoComponent />', () => {
             input.props().value
         ).toEqual('');
     });
-
-
 });
